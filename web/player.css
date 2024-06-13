@@ -1,0 +1,45 @@
+/* Upravený styl */
+video {
+  width: 30rem;
+}
+
+video::-webkit-media-controls-mute-button {
+  background-color: #1E90FF;
+  border-radius: 99%;
+  margin-bottom: 0px;
+}
+video::-webkit-media-controls-fullscreen-button {
+  background-color: #1E90FF;
+  border-radius: 99%;
+  margin-bottom: 0px;
+}
+video::-webkit-media-controls-play-button {
+  background-color: #1E90FF;
+  border-radius: 99%;
+  margin-bottom: 0px;
+}
+video::-webkit-media-controls-timeline {
+  background-color: #00CD;
+  padding-bottom: 0;
+  margin-bottom: 15px;
+}
+
+/* Styl pro pole vložení URL a tlačítko */
+#videoLink {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 300px;
+  font-size: 16px;
+}
+
+#playButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}
+

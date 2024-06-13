@@ -1,0 +1,42 @@
+/* Styly pro formulář a tlačítka */
+form {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #fff; /* Bílá barva pro text */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #222; /* Tmavý obrys pro tmavé pozadí */
+    background-color: #222; /* Tmavá barva pozadí */
+    color: #fff; /* Bílá barva textu */
+    border-radius: 4px;
+}
+
+input[type="submit"],
+button {
+    background-color: #FFA500; /* Oranžová barva pro tlačítka */
+    padding: 10px 16px;
+    border: none;
+    border-radius: 25px; /* Zaoblení hran tlačítka */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 50%; /* Šířka tlačítka je polovina rodiče */
+    margin: auto; /* Zarovnání do středu */
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #FF8C00; /* Změna barvy při najetí myši */

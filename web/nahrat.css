@@ -1,0 +1,46 @@
+body {
+    background-color: #1a1a1a; /* Tmavé pozadí */
+    color: #fff; /* Bílý text */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    color: #fda541; /* Oranžový text pro nadpis */
+}
+
+#uploadForm {
+    background-color: #333; /* Tmavé pozadí pro formulář */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #fff; /* Bílý text pro popisky */
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #fda541; /* Oranžové pozadí tlačítka */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#progress {
+    margin-top: 20px;
+    color: #fff;
+}
