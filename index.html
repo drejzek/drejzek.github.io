@@ -10,9 +10,35 @@
   <body data-bs-theme="dark" class="bg-black">
     <div class="d-flex">
         <div class="position-absolute top-50 start-50 translate-middle">
-            <h1 class="text-white">DR</h1>
+            <!-- <h1 class="text-white">DR</h1> -->
+            <ul id="repo-list"></ul>
         </div>
     </div>
+    <script>
+      // Funkce pro načtení JSON dat
+      async function loadRepositories() {
+          try {
+              let response = await fetch('https://davidrejzek.cz/repositories.json');
+              if (!response.ok) {
+                  throw new Error(`HTTP error! status: ${response.status}`);
+              }
+              let repositories = await response.json();
+
+              // Zobrazení úložišť
+              let repoList = document.getElementById('repo-list');
+              repositories.forEach(repo => {
+                  let listItem = document.createElement('li');
+                  listItem.innerHTML = `<a href="${repo.html_url}">${repo.name}</a> - ${repo.description}`;
+                  repoList.appendChild(listItem);
+              });
+          } catch (error) {
+              console.error('Chyba při načítání úložišť:', error);
+          }
+      }
+
+      // Načíst úložiště při načtení stránky
+      window.onload = loadRepositories;
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
